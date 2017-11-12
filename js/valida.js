@@ -48,5 +48,4 @@ function validaNovo(nome, peso, altura, gordura){
 
 	};
 	
-	return erros;
 };
