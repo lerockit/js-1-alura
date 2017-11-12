@@ -53,4 +53,6 @@ function criaPaciente(paciente){
 	corpoTabela.appendChild(tr);
 
 	return tr;
+
+	console.log('teste');
 };
