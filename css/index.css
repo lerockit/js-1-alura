@@ -136,3 +136,12 @@ button[disabled=disabled], button:disabled {
 .paciente.error{
 	background: lightcoral;
 }
+
+#form-adiciona button{
+	display:inline-block;
+}
+
+#form-adiciona .error{
+	display: inline-block;
+	margin-left: 25px;
+}

@@ -3,13 +3,24 @@ var button = document.querySelector('#adicionar-paciente');
 button.addEventListener('click', function(event){
 	event.preventDefault();
 
-	form = document.querySelector('#form-adiciona');
+	var form = document.querySelector('#form-adiciona');
 
 	var paciente = recebePaciente(form);
 
 	var erros = validaNovo(paciente.nome, paciente.peso, paciente.altura, paciente.gordura);
 
 	if (erros.length > 0){
+		
+		var ul = document.createElement('ul');
+		ul.classList.add('error');
+		form.appendChild(ul);
+
+		erros.forEach(function(erro){
+			var li = document.createElement('li');
+			li.textContent = erro;
+			ul.appendChild(li);
+		});
+		
 		return;
 	}
 
