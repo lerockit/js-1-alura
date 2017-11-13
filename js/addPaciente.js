@@ -54,5 +54,4 @@ function criaPaciente(paciente){
 
 	return tr;
 
-	console.log('teste');
 };
