@@ -11,16 +11,17 @@ button.addEventListener('click', function(event){
 
 	if (erros.length > 0){
 		
-		var ul = document.createElement('ul');
-		ul.classList.add('error');
-		form.appendChild(ul);
-
+		var addUl = document.createElement('ul');
+		addUl.classList.add('adiciona-error');
+		form.appendChild(addUl);
+		var ul = document.querySelector('adiciona-error');
+		
 		erros.forEach(function(erro){
 			var li = document.createElement('li');
 			li.textContent = erro;
-			ul.appendChild(li);
+			addUl.appendChild(li);
 		});
-		
+
 		return;
 	}
 
