@@ -9,21 +9,28 @@ button.addEventListener('click', function(event){
 
 	var erros = validaNovo(paciente.nome, paciente.peso, paciente.altura, paciente.gordura);
 
+	var ulError = document.querySelector('.adiciona-error');
+
+	if (ulError != undefined){
+		form.removeChild(ulError);
+	};
+
 	if (erros.length > 0){
 		
 		var addUl = document.createElement('ul');
 		addUl.classList.add('adiciona-error');
 		form.appendChild(addUl);
-		var ul = document.querySelector('adiciona-error');
 		
 		erros.forEach(function(erro){
-			var li = document.createElement('li');
-			li.textContent = erro;
-			addUl.appendChild(li);
+			var addli = document.createElement('li');
+			addli.textContent = erro;
+			addUl.appendChild(addli);
 		});
 
+		form.reset();
+
 		return;
-	}
+	};
 
 	var pacienteTr = criaPaciente(paciente);
 

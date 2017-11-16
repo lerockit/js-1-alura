@@ -192,3 +192,13 @@ body{
 	justify-content: space-between;
 	margin-top: 15px;
 }
+
+.adiciona-error{
+	list-style: none;
+	padding: 0;
+}
+
+.adiciona-error li{
+	font-family: Nexa;
+	color: red;
+}
