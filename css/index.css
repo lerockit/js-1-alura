@@ -128,8 +128,12 @@ body{
 	background: white;
 }
 
-.paciente#error{
-	background: lightcoral;
+.paciente{
+	transition: 1s;
+}
+
+.paciente.remove{
+	transform: translateX(1500px);
 }
 
 .form-container .grupo{
