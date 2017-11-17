@@ -134,10 +134,12 @@ body{
 }
 
 .paciente.filtro{
+	transition: 0.5s;
 	transform: scaleX(0);
 }
 
-.paciente.filtro.none{
+.paciente.out{
+	transition: 0.5s;
 	display: none;
 }
 
