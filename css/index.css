@@ -129,11 +129,33 @@ body{
 }
 
 .paciente{
-	transition: 1s;
+	transition: 0.5s;
+	transform-origin: 0 50%;
+}
+
+.paciente.filtro{
+	transform: scaleX(0);
+}
+
+.paciente.filtro.none{
+	display: none;
 }
 
 .paciente.remove{
 	transform: translateX(1500px);
+}
+
+.filtro-container input{
+	float: right;
+	width: 15%;
+	border-radius: 10px;
+	border:#97C83E solid 2px;
+	background-image: url(../img/filter-icon.png);
+	background-repeat: no-repeat;
+	background-position: left 5px bottom 5px;
+	text-indent: 25px;
+	height: 28px;
+	font-size: 13px;
 }
 
 .form-container .grupo{
