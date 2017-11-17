@@ -145,9 +145,14 @@ body{
 	transform: translateX(1500px);
 }
 
+input:focus,
+button:focus{
+	outline: none;
+}
+
 .filtro-container input{
 	float: right;
-	width: 15%;
+	width: 170px;
 	border-radius: 10px;
 	border:#97C83E solid 2px;
 	background-image: url(../img/filter-icon.png);
@@ -191,7 +196,7 @@ body{
 .form-container button{
 	display: block;
 	margin: 15px auto;
-	width: 13%;
+	width: 150px;
 	height: 10%;
 	background: white;
 	border:#ccc solid 2px;
