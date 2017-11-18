@@ -1,5 +1,6 @@
-body{
-
+::selection{
+	background: #97C83E;
+	color: #fff;
 }
 
 .header{
