@@ -3,21 +3,22 @@ var filtroCampo = document.querySelector('#filtro-campo');
 filtroCampo.addEventListener('input', function(){
 	var pacientes = document.querySelectorAll('.paciente');
 	
-	if(this.value.length > 0){
+	for (i=0; i < pacientes.length; i++){
+		var paciente = pacientes[i],
+			nome = paciente.querySelector('.info-nome').textContent;
 
-		for (var i = 0; i < pacientes.length; i++){
-			var paciente = pacientes[i];
-			var nome = paciente.querySelector('.info-nome').textContent;
+		paciente.classList.remove('none');
+		paciente.classList.remove('filtro');	
 
-			if(this.value != nome){
-				paciente.classList.add('filtro');
-				setTimeout(function(){
-					paciente.classList.add('out');
-				}, 500);
-			}else{
-				console.log(paciente);
-				paciente.classList.remove("out");
-			};
-		};		
+		if(this.value == '') continue;
+
+		paciente.classList.add('filtro');
+		
+		var expressao = new RegExp(this.value, "i");	
+
+		if(expressao.test(nome)){
+			paciente.classList.remove('filtro');
+		}
+
 	};
 });

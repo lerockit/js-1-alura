@@ -129,18 +129,27 @@ body{
 }
 
 .paciente{
-	transition: 0.5s;
+	transition: transform 0.5s;
 	transform-origin: 0 50%;
 }
 
 .paciente.filtro{
-	transition: 0.5s;
-	transform: scaleX(0);
+	height: 0;
+	width: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 0; 
 }
 
-.paciente.out{
-	transition: 0.5s;
-	display: none;
+.paciente td{
+	transition: 0.5s linear; 
+}
+
+.paciente.filtro td{
+	height: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 0; 
 }
 
 .paciente.remove{
